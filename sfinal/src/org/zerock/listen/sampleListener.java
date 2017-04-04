@@ -27,9 +27,7 @@ public class sampleListener implements ServletContextListener, ServletRequestLis
 	 * @see ServletRequestListener#requestDestroyed(ServletRequestEvent)
 	 */
 	public void requestDestroyed(ServletRequestEvent sre) {
-		String addr = sre.getServletRequest().getRemoteAddr();
 
-		System.out.println(addr);
 	}
 
 	/**
@@ -41,15 +39,15 @@ public class sampleListener implements ServletContextListener, ServletRequestLis
 		// 울타리(범위,공간),
 		// 라이프싸이클.기억!!
 
-ctx.setAttribute("util", new RequestUtil());
+		ctx.setAttribute("util", new RequestUtil());
 
-try {
-ctx.setAttribute("ReviewDAO", new ReviewDAO());
-} catch (Exception e) {
+		try {
+			ctx.setAttribute("ReviewDAO", new ReviewDAO());
+		} catch (Exception e) {
 
-e.printStackTrace();
-}
-		
+			e.printStackTrace();
+		}
+
 	}
 
 	/**
@@ -65,8 +63,6 @@ e.printStackTrace();
 	 */
 	public void contextInitialized(ServletContextEvent sce) {
 		// WAS가 톰켓에서 로딩될때 발생하는 이벤트
-
-		
 
 	}
 

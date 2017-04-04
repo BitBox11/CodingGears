@@ -6,6 +6,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.zerock.domain.ReviewVO;
+import org.zerock.persistence.ReviewDAO;
 
 /**
  * Servlet implementation class RegisterController
@@ -40,6 +42,26 @@ public class RegisterController extends HttpServlet {
 
 		System.out.println("register post");
 		
+		String[] userId= request.getParameterValues("userId");
+		String[] menuNo= request.getParameterValues("menuNo");
+		String[] score= request.getParameterValues("score");
+		String[] review= request.getParameterValues("review");
+		
+		ReviewVO vo = new ReviewVO();
+		
+		vo.setMemberId(userId[0]);
+		vo.setMenuNo(Integer.parseInt(menuNo[0]));
+		vo.setScore(Integer.parseInt(score[0]));
+		vo.setReview(review[0]);
+		
+		System.out.println(userId[0]);
+		System.out.println(menuNo[0]);
+		System.out.println(score[0]);
+		System.out.println(review[0]);
+		System.out.println(vo + "vo????");
+		ReviewDAO dao= new ReviewDAO() ;
+		dao.register(vo);  
+				
 		response.sendRedirect("/review");
 	}
 

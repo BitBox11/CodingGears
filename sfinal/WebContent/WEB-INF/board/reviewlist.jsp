@@ -112,12 +112,12 @@
 									<h4>
 									
 										<c:forEach items='${list}' var='review'>
-											<h3>${review.rno}</h3>
-											<h3>${review.menuNo}</h3>
-											<h3>${review.score}</h3>
-											<h3>${review.memberId}</h3>
-											<h3>${review.review}</h3>
-											<h3>${review.reviewDate}</h3>
+											<h3>${review.rno}
+											${review.menuNo}
+											${review.score}
+											${review.memberId}
+											${review.review}
+											${review.reviewDate}</h3>
 
 										</c:forEach>
 									</h4>

@@ -38,19 +38,19 @@
                                 <form method='post' role="form">
 <br/>
                                         <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="fa fa-circle-o-notch"  ></i></span>
+                                            <span class="input-group-addon">id</span>
                                             <input type="text" class="form-control" name = 'userId' placeholder="id" />
                                         </div>
                                      <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="fa fa-tag"  ></i></span>
+                                            <span class="input-group-addon">menu</span>
                                             <input type="number" class="form-control" name = 'menuNo' placeholder="메뉴번호" />
                                         </div>
                                          <div class="form-group input-group">
-                                            <span class="input-group-addon">@</span>
-                                            <input type="number" class="form-control" placeholder="score" />
+                                            <span class="input-group-addon">score</span>
+                                            <input type="number" class="form-control" name = 'score' placeholder="score" />
                                         </div>
                                       <div class="form-group input-group">
-                                            <span class="input-group-addon"><i class="fa fa-lock"  ></i></span>
+                                            <span class="input-group-addon">review</span>
                                             <input type="text" class="form-control" name='review' placeholder="review" />
                                         </div>
                                     
